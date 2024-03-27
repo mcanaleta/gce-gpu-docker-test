@@ -21,6 +21,7 @@ The deploy.sh script will build the image, upload it to Google Container Registr
 To deploy 
 
 ```bash
+gcloud auth configure-docker gcr.io
 gcloud config set project <project-id>
 ./deploy.sh
 ```
