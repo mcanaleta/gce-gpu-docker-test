@@ -1,0 +1,16 @@
+
+version: '3.8'
+services:
+  app:
+    build: .
+    volumes:
+      - .:/app
+      - poetry_cache:/root/.cache/pypoetry
+    ports:
+      - "80:80"
+    environment:
+      - PYTHONDONTWRITEBYTECODE=1
+      - PYTHONUNBUFFERED=1
+
+volumes:
+  poetry_cache:
