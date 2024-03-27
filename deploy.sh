@@ -58,3 +58,10 @@ gcloud compute instances create-with-container ${INSTANCE_NAME} \
   --metadata="install-nvidia-driver=True" \
   --tags http-server \
   --zone ${ZONE}
+
+echo "Instance created, go to https://console.cloud.google.com/compute/instances?referrer=search&project=${PROJECT_ID}"
+echo "It will take a lot of time to install the image because it is 5 Gb"
+echo "Check logs and when it finishes, open chrome and go to http://<external-ip>"
+echo "It should say: Result from the GPU: 256.0"
+
+# Wait for the instance to be ready
